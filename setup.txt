@@ -12,3 +12,12 @@ $./deviceQuery
 $cd ~/samples/5_Simulations/fluidsGLES
 $make -j4
 $./fluidsGLES
+$sudo apt-get install libfreetype6-dev pkg-config
+$pip3 install jupyter matplotlib
+$export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
+$sudo systemctl disable nvzramconfig
+$sudo fallocate -l 4G /mnt/4GB.swap
+$sudo mkswap /mnt/4GB.swap
+$sudo swapon /mnt/4GB.swap
+$sudo cp /etc/fstab /etc/fstab.bak
+$echo '/mnt/4GB.swap sw 0 0' | sudo tee -a /etc/fstab
