@@ -1,0 +1,6 @@
+$ sudo apt install -y build-essential make cmake cmake-curses-gui \
+                      git g++ pkg-config curl libfreetype6-dev \
+                      libcanberra-gtk-module libcanberra-gtk3-module \
+                      python3-dev python3-pip
+$ wget https://gist.githubusercontent.com/jkjung-avt/86b60a7723b97da19f7bfa3cb7d2690e/raw/3dd82662f6b4584c58ba81ecba93dd6f52c3366c/tegra-cam.py
+$ python3 tegra-cam.py --usb --vid 0
