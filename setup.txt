@@ -1,23 +1,23 @@
-$sudo apt install python-pip python3-pip
-$sudo -H pip install jetson-stats
+$ sudo apt install python-pip python3-pip
+$ sudo -H pip install jetson-stats
 (jtop can inspect the stats of system and activate the Jetson Clocks)
-$jetson_release
-$export | grep JETSON
-$lsb_release -a
-$/usr/lib/nux/unity_support_test -p
-$cp -a /usr/local/cuda-10.2/samples/ ~/
-$cd ~/samples/1_Utilities/deviceQuery
-$make -j4
-$./deviceQuery
-$cd ~/samples/5_Simulations/fluidsGLES
-$make -j4
-$./fluidsGLES
-$sudo apt-get install libfreetype6-dev pkg-config
-$pip3 install jupyter matplotlib
-$export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
-$sudo systemctl disable nvzramconfig
-$sudo fallocate -l 4G /mnt/4GB.swap
-$sudo mkswap /mnt/4GB.swap
-$sudo swapon /mnt/4GB.swap
-$sudo cp /etc/fstab /etc/fstab.bak
-$echo '/mnt/4GB.swap sw 0 0' | sudo tee -a /etc/fstab
+$ jetson_release
+$ export | grep JETSON
+$ lsb_release -a
+$ /usr/lib/nux/unity_support_test -p
+$ cp -a /usr/local/cuda-10.2/samples/ ~/
+$ cd ~/samples/1_Utilities/deviceQuery
+$ make -j4
+$ ./deviceQuery
+$ cd ~/samples/5_Simulations/fluidsGLES
+$ make -j4
+$ ./fluidsGLES
+$ sudo apt-get install libfreetype6-dev pkg-config
+$ pip3 install jupyter matplotlib
+$ export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
+$ sudo systemctl disable nvzramconfig
+$ sudo fallocate -l 4G /mnt/4GB.swap
+$ sudo mkswap /mnt/4GB.swap
+$ sudo swapon /mnt/4GB.swap
+$ sudo cp /etc/fstab /etc/fstab.bak
+$ echo '/mnt/4GB.swap sw 0 0' | sudo tee -a /etc/fstab
