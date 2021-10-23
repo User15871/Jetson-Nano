@@ -2,5 +2,24 @@ $ sudo apt install -y build-essential make cmake cmake-curses-gui \
                       git g++ pkg-config curl libfreetype6-dev \
                       libcanberra-gtk-module libcanberra-gtk3-module \
                       python3-dev python3-pip
+$ cd ~/Desktop
 $ wget https://gist.githubusercontent.com/jkjung-avt/86b60a7723b97da19f7bfa3cb7d2690e/raw/3dd82662f6b4584c58ba81ecba93dd6f52c3366c/tegra-cam.py
 $ python3 tegra-cam.py --usb --vid 0
+$ git clone https://github.com/jkjung-avt/jetson_nano.git
+$ cd jetson_nano
+$ ./install_basics.sh
+$ source ${HOME}/.bashrc
+$ ./install_protobuf-3.8.0.sh
+$ git clone https://github.com/jkjung-avt/tensorrt_demos.git
+$ cd tensorrt_demos/ssd
+$ ./install_pycuda.sh
+$ sudo pip3 install onnx==1.4.1
+$ cd tensorrt_demos/plugins/
+$ make
+$ cd ../yolo
+$ ./download_yolo.sh
+$ python3 yolo_to_onnx.py -m yolov4-416
+$ python3 onnx_to_tensorrt.py -v -m yolov4-416
+$ cd ..
+$ python3 trt_yolo.py --usb 0 -m yolov4-416
+
